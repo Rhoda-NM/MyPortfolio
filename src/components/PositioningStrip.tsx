@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 export default function PositioningStrip() {
   const containerVariants: Variants = {
@@ -8,7 +9,7 @@ export default function PositioningStrip() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -33,108 +34,153 @@ export default function PositioningStrip() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col gap-24"
+          className="flex flex-col gap-16"
         >
           {/* Header Section */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 mb-8 md:mb-0">
+            <motion.div variants={itemVariants}>
+              <span className="font-mono text-xs text-gray-400 tracking-wider">
+                [CORE_CAPABILITIES]
+              </span>
+            </motion.div>
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold tracking-tighter text-white font-heading"
+              className="text-4xl md:text-5xl font-bold tracking-tighter text-white font-sans"
             >
-              System Design, Not Just Development
+              Systems That Turn Ideas Into Scalable Products
             </motion.h2>
-            <motion.p
-              variants={itemVariants}
-              className="max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed"
-            >
-              Most digital products fail not because of poor code, but because of
-              poor system design. I design and build systems that are structured
-              for scale, optimized for performance, and engineered for real-world
-              use — not just ideal conditions.
-            </motion.p>
+            <div className="flex flex-col gap-4">
+              <motion.p
+                variants={itemVariants}
+                className="max-w-3xl text-gray-400 text-lg leading-relaxed font-sans"
+              >
+                I help founders and businesses turn ideas into reliable, scalable products — from the first version to systems that handle real growth without breaking.
+              </motion.p>
+              <motion.p
+                variants={itemVariants}
+                className="max-w-3xl text-[#7B2CBF] font-semibold text-xl leading-relaxed font-sans mt-2"
+              >
+                Most developers focus on features. I focus on building systems that still work when your users grow.
+              </motion.p>
+            </div>
           </div>
 
-          {/* Three Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-20">
-            {/* Pillar 1: Architecture */}
+          <div className="flex flex-col gap-12">
+            {/* Three Pillars Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+              {/* Pillar 1: Build */}
+              <motion.div
+                variants={itemVariants}
+                className="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.01] transition-all duration-500 hover:bg-white/[0.03] hover:border-white/20 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 rounded-2xl bg-white/0 group-hover:bg-white/5 blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
+                <div className="flex flex-col gap-4 h-full">
+                  <span className="font-mono text-sm tracking-wider text-gray-400">
+                    [01_BUILD]
+                  </span>
+                  <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-sans">
+                    Full-Stack Product Development
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base flex-grow">
+                    I build production-ready applications — not just prototypes — designed to perform reliably as your product grows.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <p className="font-mono text-sm text-gray-400 leading-relaxed">
+                      SaaS Platforms, Dashboards, Booking Systems, Internal Tools.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pillar 2: Systems */}
+              <motion.div
+                variants={itemVariants}
+                className="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.01] transition-all duration-500 hover:bg-white/[0.03] hover:border-white/20 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 rounded-2xl bg-white/0 group-hover:bg-white/5 blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
+                <div className="flex flex-col gap-4 h-full">
+                  <span className="font-mono text-sm tracking-wider text-gray-400">
+                    [02_SYSTEMS]
+                  </span>
+                  <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-sans">
+                    Scalable Backend & System Architecture
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base flex-grow">
+                    I design systems that don’t break under load — so your product remains stable as users, data, and complexity increase.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <p className="font-mono text-sm text-gray-400 leading-relaxed">
+                      REST APIs, Real-Time Systems, Database Design, Cloud Deployment.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pillar 3: Automation */}
+              <motion.div
+                variants={itemVariants}
+                className="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.01] transition-all duration-500 hover:bg-white/[0.03] hover:border-white/20 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 rounded-2xl bg-white/0 group-hover:bg-white/5 blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
+                <div className="flex flex-col gap-4 h-full">
+                  <span className="font-mono text-sm tracking-wider text-gray-400">
+                    [03_AUTOMATION]
+                  </span>
+                  <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-sans">
+                    Automation & AI-Driven Workflows
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base flex-grow">
+                    I eliminate repetitive work by building systems that run automatically — saving time and reducing operational cost.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <p className="font-mono text-sm text-gray-400 leading-relaxed">
+                      Automated Workflows, AI Agents, Data Pipelines.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* High-Impact Filter: Who I Work With */}
             <motion.div
               variants={itemVariants}
-              className="group relative p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#7B2CBF]/5 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(123,44,191,0.12)]"
+              className="w-full bg-white/[0.02] border border-white/5 rounded-2xl py-6 px-8 flex flex-col md:flex-row items-center gap-6 md:gap-0"
             >
-              <div className="absolute inset-0 rounded-2xl bg-[#7B2CBF]/0 group-hover:bg-[#7B2CBF]/15 blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
-              <div className="flex flex-col gap-4">
-                <span className="font-mono text-sm tracking-wider text-zinc-400">
-                  [01_ARCHITECTURE]
-                </span>
-                <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-heading">
-                  Structured for Scale.
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-base">
-                  Every system is designed with clear boundaries and scalable
-                  structure—decisions that hold under growth. Not just what works
-                  today, but what continues to work as complexity increases.
-                </p>
+              <div className="text-gray-400 font-mono tracking-wider whitespace-nowrap md:pr-8 md:border-r md:border-white/10 text-center md:text-left w-full md:w-auto uppercase">
+                Who I work with
+              </div>
+              <div className="flex flex-col md:flex-row w-full justify-evenly items-center gap-4 md:gap-0 text-white font-medium text-sm md:text-base">
+                <div className="text-center md:px-6 w-full md:border-r md:border-white/10 border-white/10 pb-4 md:pb-0 border-b md:border-b-0">
+                  Founders building SaaS or digital products
+                </div>
+                <div className="text-center md:px-6 w-full md:border-r md:border-white/10 border-white/10 py-4 md:py-0 border-b md:border-b-0">
+                  Businesses that need internal systems or automation
+                </div>
+                <div className="text-center md:px-6 w-full pt-4 md:pt-0">
+                  Teams scaling beyond MVP and hitting technical limits
+                </div>
               </div>
             </motion.div>
-
-            {/* Pillar 2: Performance */}
+            
+            {/* The Conversion Bridge */}
             <motion.div
               variants={itemVariants}
-              className="group relative p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#7B2CBF]/5 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(123,44,191,0.12)]"
+              className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-12 pb-4 mt-4 border-t border-white/5"
             >
-              <div className="absolute inset-0 rounded-2xl bg-[#7B2CBF]/0 group-hover:bg-[#7B2CBF]/15 blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
-              <div className="flex flex-col gap-4">
-                <span className="font-mono text-sm tracking-wider text-zinc-400">
-                  [02_PERFORMANCE]
-                </span>
-                <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-heading">
-                  Performance is Engineered — Not Added.
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-base">
-                  Performance is not an afterthought. It is built into the system
-                  from the start—from data flow to infrastructure. Systems are
-                  designed to remain fast, stable, and responsive under real-world
-                  conditions.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Pillar 3: Automation */}
-            <motion.div
-              variants={itemVariants}
-              className="group relative p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#7B2CBF]/5 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(123,44,191,0.12)]"
-            >
-              <div className="absolute inset-0 rounded-2xl bg-[#7B2CBF]/0 group-hover:bg-[#7B2CBF]/15 blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 -z-10" />
-              <div className="flex flex-col gap-4">
-                <span className="font-mono text-sm tracking-wider text-zinc-400">
-                  [03_AUTOMATION]
-                </span>
-                <h3 className="text-2xl font-bold text-white tracking-tight mt-2 font-heading">
-                  Reduce Friction. Increase Leverage.
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-base">
-                  From AI-driven workflows to automated processes, the goal is to
-                  create systems that operate efficiently with minimal manual
-                  intervention.
-                </p>
-              </div>
+              <p className="text-gray-400 text-lg">Want to build something that scales from day one?</p>
+              <Link 
+                href="/contact" 
+                className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300"
+              >
+                Start a Project
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </Link>
             </motion.div>
           </div>
 
-          {/* Conclusion Footer */}
-          <motion.div
-            variants={itemVariants}
-            className="pt-24 pb-8 flex flex-col items-center justify-center relative mt-12"
-          >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-[#7B2CBF]/30 to-transparent" />
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 max-w-sm h-[1px] bg-gradient-to-r from-transparent via-[#7B2CBF]/80 to-transparent blur-[2px]" />
-            <p className="text-center text-2xl md:text-4xl text-white font-heading font-semibold tracking-tighter max-w-3xl mx-auto leading-tight">
-              This is the difference between building applications <br className="hidden md:block" />
-              <span className="text-gray-500">— and engineering systems that scale.</span>
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
   );
 }
+
