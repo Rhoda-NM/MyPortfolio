@@ -11,7 +11,7 @@ export default function KinariLiveDetail() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] } 
+      transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number] } 
     }
   };
 
@@ -174,13 +174,13 @@ export default function KinariLiveDetail() {
               <div className="border-l border-[#7B2CBF]/30 pl-6">
                 <h4 className="text-white font-heading font-semibold text-xl mb-2">Latency vs. Compatibility</h4>
                 <p className="text-gray-400 font-sans leading-relaxed">
-                  WebRTC offers ultra-low latency but struggles with massive concurrent global fan-out compared to robust CDNs. Extracting the pure WebRTC feed and dynamically transcoding it into HLS via egress workers was necessary to support unbounded audiences while keeping the host's ingest latency sub-second.
+                  WebRTC offers ultra-low latency but struggles with massive concurrent global fan-out compared to robust CDNs. Extracting the pure WebRTC feed and dynamically transcoding it into HLS via egress workers was necessary to support unbounded audiences while keeping the host&apos;s ingest latency sub-second.
                 </p>
               </div>
               <div className="border-l border-[#7B2CBF]/30 pl-6">
                 <h4 className="text-white font-heading font-semibold text-xl mb-2">Network Variability</h4>
                 <p className="text-gray-400 font-sans leading-relaxed">
-                  Browser-native capture is vulnerable to the client’s network state. We implemented aggressive adaptive bitrate streaming (ABR) and simulated edge fallback mechanics to ensure that upstream packet loss resulted in resolution degradation rather than connection drops.
+                  Browser-native capture is vulnerable to the client&apos;s network state. We implemented aggressive adaptive bitrate streaming (ABR) and simulated edge fallback mechanics to ensure that upstream packet loss resulted in resolution degradation rather than connection drops.
                 </p>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function KinariLiveDetail() {
 
             <div className="relative py-12">
               <p className="text-2xl md:text-3xl text-white font-heading font-medium tracking-tight leading-relaxed italic text-center max-w-3xl mx-auto">
-                "Building real-time systems requires more than connecting services — it requires understanding how data moves, transforms, and fails under pressure."
+                &quot;Building real-time systems requires more than connecting services — it requires understanding how data moves, transforms, and fails under pressure.&quot;
               </p>
             </div>
           </motion.div>

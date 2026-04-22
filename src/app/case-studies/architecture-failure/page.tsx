@@ -31,12 +31,12 @@ export default function SystemDesignDeepDive() {
         <main className="w-full max-w-3xl flex-shrink font-sans text-lg text-gray-300 leading-relaxed pb-24 min-w-0">
         
         <p className="mb-8">
-          In large-scale composite applications, the blast radius of a single failing dependency shouldn't take down the entire user experience. When building the orchestration layer for a high-traffic fintech dashboard, we faced a critical challenge: downstream service latency was causing complete client-side lockups.
+          In large-scale composite applications, the blast radius of a single failing dependency shouldn&apos;t take down the entire user experience. When building the orchestration layer for a high-traffic fintech dashboard, we faced a critical challenge: downstream service latency was causing complete client-side lockups.
         </p>
 
         {/* 4. Business Bridge */}
         <BusinessBridge>
-          <strong>Revenue Protection:</strong> Every 100ms of latency at the edge translated to a 0.5% drop in transaction volume. By isolating failures, we aren{"'"}t just building "better tech"—we are directly protecting the core transaction funnel from third-party API instability. Trust is preserved.
+          <strong>Revenue Protection:</strong> Every 100ms of latency at the edge translated to a 0.5% drop in transaction volume. By isolating failures, we aren{"'"}t just building &quot;better tech&quot;—we are directly protecting the core transaction funnel from third-party API instability. Trust is preserved.
         </BusinessBridge>
 
         <h2 className={`font-heading ${geistSans.className} text-3xl font-bold text-white mt-16 mb-6 tracking-tight`}>
@@ -49,7 +49,7 @@ export default function SystemDesignDeepDive() {
 
         {/* 3. Insight Block */}
         <InsightBlock>
-          The goal is not zero failure. It is limiting the blast radius. A resilient system doesn't hide errors; it degrades gracefully.
+          The goal is not zero failure. It is limiting the blast radius. A resilient system doesn&apos;t hide errors; it degrades gracefully.
         </InsightBlock>
 
         <p className="mb-8">

@@ -3,11 +3,10 @@ import { FileCode, Copy } from "lucide-react";
 
 interface CodeBlockProps {
   filename: string;
-  language?: string;
   code: string;
 }
 
-export default function CodeBlock({ filename, language = "typescript", code }: CodeBlockProps) {
+export default function CodeBlock({ filename, code }: CodeBlockProps) {
   return (
     <div className="my-10 rounded-xl overflow-hidden border border-white/10 bg-[#0A0A0C]">
       {/* Header */}

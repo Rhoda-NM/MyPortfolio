@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PositioningStrip from "@/components/PositioningStrip";
 import SelectedSystems from "@/components/SelectedSystems";
-import SystemsWave from "@/components/SystemsWave";
 import LatestThinking from "@/components/LatestThinking";
 
 export default function Home() {

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { MoveRight } from "lucide-react";
 
 export default function PositioningStrip() {
   const containerVariants: Variants = {
