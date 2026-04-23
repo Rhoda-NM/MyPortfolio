@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -109,13 +110,13 @@ export default function AboutSection() {
                 &quot;I don&apos;t just build features — I design the systems that allow your business to scale with confidence.&quot;
               </p>
               
-              <a 
-                href="#contact" 
+              <Link 
+                href="/contact" 
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold font-sans rounded-full hover:bg-gray-200 transition-all duration-300"
               >
                 Book a Strategic Audit
                 <span className="transition-transform group-hover:translate-x-1">→</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

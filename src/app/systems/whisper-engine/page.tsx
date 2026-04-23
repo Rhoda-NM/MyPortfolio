@@ -28,7 +28,7 @@ export default function WhisperEngineDetail() {
       <Navbar />
 
       {/* Navigation Return */}
-      <div className="absolute top-28 left-6 md:left-12 z-50">
+      <div className="fixed top-28 left-6 md:left-12 z-50">
         <Link 
           href="/#systems" 
           className="group flex items-center gap-2 text-sm font-sans tracking-wide text-gray-500 hover:text-white transition-colors uppercase"
@@ -175,7 +175,7 @@ export default function WhisperEngineDetail() {
             Building an AI-powered product that needs structure and scale?
           </p>
           <Link 
-            href="/#contact" 
+            href="/contact" 
             className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold font-sans rounded-full hover:bg-gray-200 transition-all duration-300"
           >
             Start a Project

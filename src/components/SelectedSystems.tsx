@@ -61,7 +61,7 @@ export default function SelectedSystems() {
   };
 
   return (
-    <section className="relative w-full bg-[#080809] py-32 border-t border-[#ffffff05] overflow-hidden">
+    <section id="systems" className="relative w-full bg-[#080809] py-32 border-t border-[#ffffff05] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           variants={containerVariants}
@@ -158,7 +158,7 @@ export default function SelectedSystems() {
               Need a system built with the same level of clarity?{" "}
               <br className="block sm:hidden" />
               <Link 
-                href="#contact" 
+                href="/contact" 
                 className="text-white hover:text-white transition-all font-semibold underline underline-offset-8 decoration-white/40 hover:decoration-[#7B2CBF] hover:shadow-[0_0_15px_rgba(123,44,191,0.5)]"
               >
                 Start a project.

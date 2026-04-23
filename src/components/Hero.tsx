@@ -37,7 +37,7 @@ export default function Hero() {
           
           {/* Secondary CTA */}
           <Link 
-            href="#audit" 
+            href="/contact" 
             className="group relative py-2 text-gray-400 hover:text-white transition-colors text-sm font-semibold uppercase tracking-widest inline-flex items-center gap-2 cursor-snap cursor-pointer"
           >
             Request a Strategic Audit
