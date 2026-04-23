@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -31,7 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${manrope.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden selection:bg-purple-500/30`}
       >
         <CustomCursor />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
