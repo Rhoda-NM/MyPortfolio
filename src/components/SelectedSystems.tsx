@@ -8,27 +8,30 @@ const systems = [
   {
     headline: "Kinari Live",
     description: [
-      "Real-time streaming infrastructure designed for low-latency broadcast delivery.",
-      "Built around a browser-native capture pipeline using WebRTC, LiveKit, egress orchestration, and Cloudflare delivery — engineered to move from creator input to viewer playback with speed and resilience."
+      "A real-time streaming system for low-latency broadcast at scale.",
+      "Built to enable browser-based live streaming with sub-second ingest and scalable global playback. Designed for platforms that need real-time interaction without sacrificing reliability."
     ],
+    microTarget: "For platforms that need real-time delivery",
     tags: ["Real-Time Systems", "Streaming Infrastructure", "WebRTC", "Cloudflare"],
     href: "/systems/kinari-live"
   },
   {
     headline: "Whisper Engine",
     description: [
-      "An AI-driven response and memory system designed for contextual interaction at scale.",
-      "Structured around wallet-aware usage logic, tiered access, memory injection, and response orchestration — combining product logic, persistence, and AI execution into a cohesive experience."
+      "An AI-powered system for building context-aware applications.",
+      "Designed to support intelligent workflows with persistent memory, structured responses, and controlled usage — enabling AI features that go beyond simple chat interfaces."
     ],
+    microTarget: "For teams integrating AI into workflows.",
     tags: ["AI Systems", "Context Engineering", "Product Logic", "Automation"],
     href: "/systems/whisper-engine"
   },
   {
     headline: "Operational Platform Systems",
     description: [
-      "Full-stack systems built to support business workflows, data integrity, and long-term maintainability.",
-      "From authenticated APIs to structured admin workflows, these systems are designed around clean architecture, operational usability, and reliable application behavior under real use."
+      "Custom backend and internal systems that power business operations.",
+      "From dashboards to APIs and automation workflows, these systems are designed to improve efficiency, maintain data integrity, and scale with your team."
     ],
+    microTarget: "For businesses scaling internal operations.",
     tags: ["Full-Stack Systems", "Backend Architecture", "API Design", "Product Infrastructure"],
     href: "#"
   }
@@ -73,19 +76,19 @@ export default function SelectedSystems() {
               variants={itemVariants}
               className="font-mono text-xs tracking-widest text-[#c0c0c0] uppercase"
             >
-              [MY SELECTED PROJECTS]
+              [SELECTED_SYSTEMS]
             </motion.span>
             <motion.h2
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold tracking-tighter text-white font-heading"
             >
-              Built for real-world performance.
+              Systems Built for Production.
             </motion.h2>
             <motion.p
               variants={itemVariants}
-              className="max-w-lg text-gray-400 text-lg leading-relaxed font-sans"
+              className="max-w-2xl text-gray-400 text-lg leading-relaxed font-sans"
             >
-              A selection of systems designed for scale, reliability, and operational clarity — from real-time infrastructure to intelligent digital workflows.
+              A selection of systems built to solve real business problems — from customer-facing platforms to internal tools and AI-powered workflows.
             </motion.p>
           </div>
 
@@ -111,8 +114,13 @@ export default function SelectedSystems() {
                   
                   <div className={`flex flex-col gap-4 text-gray-400 leading-relaxed text-sm md:text-base mb-10 flex-grow pr-4 ${index === 0 ? "w-full md:w-2/3 md:text-lg" : "md:pr-12"}`}>
                     {system.description.map((paragraph, pIndex) => (
-                      <p key={pIndex}>{paragraph}</p>
+                      <p key={pIndex} className={pIndex === 0 ? "text-white font-medium" : ""}>{paragraph}</p>
                     ))}
+                    <div className="mt-4 flex">
+                      <span className="text-sm font-serif italic text-[#7B2CBF] bg-[#7B2CBF]/10 px-4 py-2 rounded-md border border-[#7B2CBF]/20">
+                        {system.microTarget}
+                      </span>
+                    </div>
                   </div>
                 </div>
                 

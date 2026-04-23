@@ -12,7 +12,7 @@ export default function Hero() {
         <HeroFadeUpItem className="overflow-hidden mb-10">
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[1.05]">
             I design and build systems that scale businesses <br className="hidden md:block" />
-            <span className="text-white/30">&mdash; not just websites.</span>
+            <span className="text-[#7B2CBF] drop-shadow-[0_0_15px_rgba(123,44,191,0.3)]">&mdash; not just websites.</span>
           </h1>
         </HeroFadeUpItem>
 
