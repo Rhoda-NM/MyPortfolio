@@ -67,7 +67,7 @@ export default function KinariLiveDetail() {
             variants={fadeUp}
             className="text-xl md:text-2xl text-gray-400 font-sans leading-relaxed max-w-2xl mb-10"
           >
-            Real-time streaming infrastructure designed for low-latency broadcast delivery.
+            A real-time streaming system that enables creators to go live directly from the browser, delivering low-latency video to global audiences without relying on external tools.
           </motion.p>
 
           <motion.div 
@@ -89,11 +89,34 @@ export default function KinariLiveDetail() {
         <section className="mb-32">
           <motion.div variants={fadeUp} className="flex flex-col gap-6">
             <span className="font-mono text-xs tracking-widest text-zinc-500 uppercase">
-              [01_THE_PROBLEM]
+              [THE_PROBLEM]
             </span>
             <p className="text-xl md:text-2xl text-gray-300 font-sans leading-relaxed">
               Real-time video delivery is fundamentally complex. Traditional streaming pipelines introduce latency, break under network variability, and rely heavily on external encoding tools. The challenge was to design a system that enables <strong className="text-white font-medium">real-time broadcasting directly from the browser</strong>, while maintaining performance, reliability, and scalability.
             </p>
+          </motion.div>
+        </section>
+
+        {/* 2.5 What This Enables (Impact) */}
+        <section className="mb-32">
+          <motion.div variants={fadeUp} className="flex flex-col gap-10">
+            <span className="font-mono text-xs tracking-widest text-zinc-500 uppercase">
+              [01_IMPACT]
+            </span>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {[
+                { title: "Zero-Tool Broadcasting", desc: "Real-time streaming directly from the browser, eliminating the need for OBS or complex external software." },
+                { title: "Sub-Second Ingest", desc: "Near-instant transmission from creator to infrastructure." },
+                { title: "Global Scalability", desc: "Seamless playback for thousands of concurrent viewers via automated CDN distribution." },
+                { title: "Fault Resilience", desc: "Graceful degradation and adaptive bitrate handling to maintain uptime during network variability." }
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col gap-2">
+                  <h4 className="text-white font-heading font-semibold text-lg">{item.title}</h4>
+                  <p className="text-gray-400 font-sans leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </section>
 
@@ -107,7 +130,7 @@ export default function KinariLiveDetail() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 { title: "Browser-Native Encoding", desc: "Using WebRTC to capture and encode streams directly from the client, bypassing external heavy-lifters." },
-                { title: "Real-Time Transport", desc: "LiveKit SFU orchestration for low-latency distribution and efficient routing." },
+                { title: "Real-Time Transport", desc: "LiveKit SFU handles real-time distribution, ensuring streams remain fast and stable even as viewership grows." },
                 { title: "Format Conversion", desc: "Egress pipelines to convert WebRTC to RTMPS for legacy CDN compatibility." },
                 { title: "Global Delivery", desc: "Cloudflare HLS transformation for scalable, regional playback." }
               ].map((item, idx) => (
@@ -163,6 +186,30 @@ export default function KinariLiveDetail() {
           </motion.div>
         </section>
 
+        {/* Component: Performance Snapshot */}
+        <section className="mb-32">
+          <motion.div variants={fadeUp} className="w-full bg-[#080809] border border-white/10 rounded-xl p-6 md:p-8 font-mono text-sm md:text-base text-gray-300 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex flex-col gap-1 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                <span className="text-zinc-500 uppercase text-xs mb-1">Ingest Latency</span>
+                <span className="text-white font-medium">~sub-second</span>
+              </div>
+              <div className="flex flex-col gap-1 border-b md:border-b-0 border-white/10 pb-4 md:pb-0">
+                <span className="text-zinc-500 uppercase text-xs mb-1">Playback Latency</span>
+                <span className="text-white font-medium">~20–30s (Global HLS)</span>
+              </div>
+              <div className="flex flex-col gap-1 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                <span className="text-zinc-500 uppercase text-xs mb-1">Capacity</span>
+                <span className="text-white font-medium">Concurrent viewers via CDN scaling</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-zinc-500 uppercase text-xs mb-1">Resilience</span>
+                <span className="text-white font-medium">Adaptive Bitrate + Fallback Handling</span>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
         {/* 5. Engineering Challenges */}
         <section className="mb-32">
           <motion.div variants={fadeUp} className="flex flex-col gap-10">
@@ -187,9 +234,9 @@ export default function KinariLiveDetail() {
           </motion.div>
         </section>
 
-        {/* 6. Technical Stack & Closing Insight */}
+        {/* 6. Technical Stack */}
         <section className="mb-32">
-          <motion.div variants={fadeUp} className="flex flex-col gap-16">
+          <motion.div variants={fadeUp} className="flex flex-col gap-10">
             <div>
               <span className="font-mono text-xs tracking-widest text-zinc-500 uppercase block mb-6">
                 [TECHNICAL_STACK]
@@ -206,28 +253,42 @@ export default function KinariLiveDetail() {
                 <li>Node APIs</li>
               </ul>
             </div>
+          </motion.div>
+        </section>
 
-            <div className="relative py-12">
-              <p className="text-2xl md:text-3xl text-white font-heading font-medium tracking-tight leading-relaxed italic text-center max-w-3xl mx-auto">
-                &quot;Building real-time systems requires more than connecting services — it requires understanding how data moves, transforms, and fails under pressure.&quot;
-              </p>
-            </div>
+        {/* The Why This Matters Bridge */}
+        <section className="mb-32">
+          <motion.div variants={fadeUp} className="p-8 md:p-12 border border-white/10 bg-white/[0.02] rounded-3xl text-center flex flex-col gap-8 items-center">
+            <span className="font-mono text-xs tracking-widest text-[#7B2CBF] uppercase">
+              [THE_BOTTOM_LINE]
+            </span>
+            <p className="text-xl md:text-2xl text-white font-sans leading-relaxed max-w-3xl">
+              Most streaming systems prioritize either low latency or scalability—rarely both. This architecture bridges that gap: creators get real-time responsiveness, viewers get reliable playback, and the system remains stable under growth.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* Closing Insight */}
+        <section className="mb-32">
+          <motion.div variants={fadeUp} className="relative py-12">
+            <p className="text-2xl md:text-3xl text-white font-heading font-medium tracking-tight leading-relaxed italic text-center max-w-3xl mx-auto">
+              &quot;Building real-time systems requires more than connecting services — it requires understanding how data moves, transforms, and fails under pressure.&quot;
+            </p>
           </motion.div>
         </section>
 
         {/* 7. Conversion CTA */}
-        <motion.div variants={fadeUp} className="pt-20 pb-32 border-t border-white/5 flex justify-center">
-          <div className="text-center">
-            <p className="text-gray-400 font-sans text-lg md:text-xl mb-8">
-              Looking to build a system with this level of clarity?
-            </p>
-            <Link 
-              href="/#contact" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-semibold font-sans uppercase tracking-widest text-sm rounded-full hover:bg-gray-200 transition-colors"
-            >
-              Start a Project
-            </Link>
-          </div>
+        <motion.div variants={fadeUp} className="pt-20 pb-32 border-t border-white/5 flex flex-col items-center gap-8 text-center">
+          <p className="text-gray-400 font-sans text-xl md:text-2xl max-w-xl leading-relaxed">
+            Building something that needs to scale reliably from day one?
+          </p>
+          <Link 
+            href="/#contact" 
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold font-sans rounded-full hover:bg-gray-200 transition-all duration-300"
+          >
+            Start a Project
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
         </motion.div>
 
       </motion.div>

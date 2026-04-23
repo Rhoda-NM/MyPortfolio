@@ -31,7 +31,7 @@ export default function LatestThinking() {
           [INSIGHTS_&_LOGIC]
         </span>
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-          The Architect{"'"}s Ledger.
+          The Developer{"'"}s Ledger.
         </h2>
         <p className="font-sans text-gray-400 text-lg max-w-2xl">
           Field notes on scalability, resilient infrastructure, and the trade-offs of modern system design.

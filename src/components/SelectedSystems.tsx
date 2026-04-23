@@ -21,7 +21,7 @@ const systems = [
       "Structured around wallet-aware usage logic, tiered access, memory injection, and response orchestration — combining product logic, persistence, and AI execution into a cohesive experience."
     ],
     tags: ["AI Systems", "Context Engineering", "Product Logic", "Automation"],
-    href: "#"
+    href: "/systems/whisper-engine"
   },
   {
     headline: "Operational Platform Systems",
@@ -73,7 +73,7 @@ export default function SelectedSystems() {
               variants={itemVariants}
               className="font-mono text-xs tracking-widest text-[#c0c0c0] uppercase"
             >
-              [SELECTED SYSTEMS]
+              [MY SELECTED PROJECTS]
             </motion.span>
             <motion.h2
               variants={itemVariants}
